@@ -1,0 +1,29 @@
+@import '../../../../_variables';
+
+.cabecera {
+    padding: 20px 0;
+	background:$darkBlue;
+
+    .titulo-cabecera {
+        float: left;
+    }
+
+    .logo-cabecera {
+        float: right;
+    }
+
+}
+
+  .borderless{
+      margin-top: 0 !important;
+      border-bottom: 2px solid $darkBlue;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .ui.text.container{
+
+  }
+
+
+
