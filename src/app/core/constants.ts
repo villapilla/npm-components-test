@@ -1,5 +1,14 @@
 export const Constants = Object.freeze({
     Routes: {
-        Home: ''
+        Init: '',
+        Home: 'home',
+        Internationalization: 'Internationalization'
+    },
+    Language: {
+        DefaultLanguages: ['en', 'fr', 'es'],
+        DefaultLanguage: 'en'
+    },
+    LocalStorage: {
+        Lang: 'locationId'
     }
 });

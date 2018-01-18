@@ -1,0 +1,8 @@
+@import '../../../_variables';
+.ui {
+    &.dimmer {
+        &.general-loading {
+            background-color: $white;
+        }
+    }
+}

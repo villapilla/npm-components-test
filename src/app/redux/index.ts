@@ -60,3 +60,8 @@ export const getShowSpinner = createSelector(
     getLayoutState,
     globalUi.getShowSpinner
 );
+
+export const getLanguage = createSelector(
+    getLayoutState,
+    globalUi.getLanguage
+);

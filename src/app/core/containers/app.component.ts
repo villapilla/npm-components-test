@@ -1,34 +1,58 @@
+import { Constants } from './../constants';
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../../redux';
+import * as rootActions from '../actions/global-ui';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit, OnDestroy {
-  showSpinner = false;
-  mostrarMenu = false;
+    showSpinner = false;
+    subscriptions: Subscription[] = [];
 
-  subscriptions : Subscription[] = [];
+    constructor(private store: Store<fromRoot.State>, private router: Router, private translate: TranslateService) {
+        this.setInitLanguage();
+    }
 
-  constructor(private store: Store<fromRoot.State>, private router: Router) {
+    ngOnInit(): void {
 
-  }
+        this.subscriptions.push(this.store.select(fromRoot.getShowSpinner).subscribe(x => {
+            setTimeout(() => {
+                this.showSpinner = x;
+            }, 1);
+        }));
+    }
 
-  ngOnInit(): void {
+    ngOnDestroy() {
+        this.subscriptions.forEach(x => x.unsubscribe());
+    }
 
-      this.subscriptions.push(this.store.select(fromRoot.getShowSpinner).subscribe(x => {
-          setTimeout(() => {
-              this.showSpinner = x;
-          }, 1);
-      }));
-  }
+    private setInitLanguage() {
+        const langs: string[] = Constants.Language.DefaultLanguages,
+            selectedLanguage: string = localStorage.getItem(Constants.LocalStorage.Lang);
+        let browserLang: string,
+            lang: string;
 
-  ngOnDestroy() {
-      this.subscriptions.forEach(x => x.unsubscribe());
-  }
+        if (selectedLanguage) {
+
+            browserLang = selectedLanguage;
+        } else {
+
+            browserLang =  this.translate.getBrowserLang() || this.translate.getBrowserCultureLang();
+        }
+        lang = browserLang.match(langs.join('|')) ? browserLang : Constants.Language.DefaultLanguage;
+
+        this.translate.addLangs(langs);
+        this.translate.setDefaultLang(Constants.Language.DefaultLanguage);
+        this.translate.use(lang);
+
+        this.store.dispatch(new rootActions.SetLanguageAction(lang));
+    }
 }

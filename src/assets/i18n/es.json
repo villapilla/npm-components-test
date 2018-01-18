@@ -1,0 +1,14 @@
+{
+    "LOADING": "Cargando",
+    "HEAD": {
+        "HOME": "Inicio",
+        "INT": "Internacionalización",
+        "UPCOMING": "Proximos Eventos",
+        "LANGUAGE": "Idioma"
+    },
+    "INT": {
+        "TITLE": "Internacionalización",
+        "TEXT1": "La batalla de Normandía, llamada en clave Operación Overlord, fue la operación militar efectuada por los Aliados durante la Segunda Guerra Mundial que culminó con la liberación de los territorios de Europa occidental ocupados por la Alemania nazi. La operación dio comienzo el 6 de junio de 1944, más conocido como el Día D, con el desembarco de Normandía; el conjunto de las operaciones navales recibió el nombre clave de Operación Neptuno. Un asalto aerotransportado llevado a cabo por mil doscientas aeronaves precedió al desembarco anfibio, que involucró a cinco mil barcos. El día 6 de junio, ciento sesenta mil soldados cruzaron el canal de la Mancha de Inglaterra a Francia y hacia finales de agosto las tropas aliadas en suelo francés eran más de tres millones.",
+        "TEXT2": "La decisión de emprender una invasión a través del canal de la Mancha en 1944 se tomó en la Conferencia Trident de Washington D. C., en mayo de 1943. El general estadounidense Dwight D. Eisenhower fue nombrado comandante del Cuartel General Supremo de la Fuerza Expedicionaria Aliada (SHAEF) y el general británico Bernard Montgomery comandante del 21.er Grupo de Ejércitos, que aglutinaba todas las fuerzas terrestres que tomarían parte en la invasión. El lugar elegido fue la costa de la región francesa de Normandía, donde se seleccionaron cinco playas a las que se dieron nombres en clave: Utah y Omaha, que serían atacadas por los estadounidenses, Sword y Gold, objetivo de los británicos, y la playa Juno, lugar de desembarco de los canadienses."
+    }
+}

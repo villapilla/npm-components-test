@@ -5,10 +5,12 @@ import { Constants } from '../constants';
 
 export interface State {
     showSpinner: boolean;
+    language: string;
 }
 
 export const initialState: State = {
     showSpinner: false,
+    language: null
 };
 
 
@@ -17,6 +19,9 @@ export function reducer(state = initialState, action: GlobalUI.Actions): State {
 
         case GlobalUI.SET_SPINNER:
             return Object.assign({}, state, { showSpinner: action.payload });
+
+        case GlobalUI.SET_LANGUAGE:
+            return Object.assign({}, state, { language: action.payload });
 
         default:
             return state;
@@ -33,3 +38,4 @@ export function reducer(state = initialState, action: GlobalUI.Actions): State {
  */
 
 export const getShowSpinner = (state: State) => state.showSpinner;
+export const getLanguage = (state: State) => state.language;

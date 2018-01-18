@@ -1,13 +1,27 @@
-<div class="ui borderless main menu">
-  <div class="ui text container">
-
-      <div class="ui dropdown link item" suiDropdown>
-          <span class="text">Home</span>
-          <i class="dropdown icon"></i>
-          <div class="menu" suiDropdownMenu>
-            <div class="item" routerLink="/">Home</div>
-          </div>
-      </div>
-     
-  </div>
+<div class="ui top secondary pointing menu">
+    <div class="item logo">
+        <img src="assets/img/logo.png">
+    </div>
+    <a class="item" routerLink="/home" routerLinkActive="active">{{ 'HEAD.HOME' | translate }}</a>
+    <a class="item" routerLink="/Internationalization" routerLinkActive="active">{{ 'HEAD.INT' | translate }}</a>
+    <a class="item" routerLinkActive="active">{{ 'HEAD.UPCOMING' | translate }}</a>
+    <div class="right menu">
+        <div class="ui right aligned item">
+            <div class="ui item primary dropdown button without-padding" suiDropdown>
+                <div class="text icon-right">{{ 'HEAD.LANGUAGE' | translate }}<i class="{{'icon icon-' + selectedLanguage }}"></i></div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                    <div class="item" (click)="changeLanguage('es')">
+                        <span><i class="icon icon-es"></i>es-ES</span>
+                    </div>
+                    <div class="item" (click)="changeLanguage('fr')">
+                        <span><i class="icon icon-fr"></i>fr-FR</span>
+                    </div>
+                    <div class="item" (click)="changeLanguage('en')">
+                        <span><i class="icon icon-en"></i>en-EN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

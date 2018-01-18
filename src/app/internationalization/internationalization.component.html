@@ -1,0 +1,24 @@
+<section class="page-container">
+    <div class="ui content app-page-container">
+        <div class="ui title">
+            <h2 translate>{{ 'INT.TITLE' | translate }}</h2>
+        </div>
+        <div class="ui top attached tabular menu language">
+            <div class="item" [ngClass]="{'active': selectedLanguage === 'es'}" (click)="changeLanguage('es')">
+                <span><i class="icon icon-es"></i>es-ES</span>
+            </div>
+            <div class="item" [ngClass]="{'active': selectedLanguage === 'fr'}" (click)="changeLanguage('fr')">
+                <span><i class="icon icon-fr"></i>fr-FR</span>
+            </div> 
+            <div class="item" [ngClass]="{'active': selectedLanguage === 'en'}" (click)="changeLanguage('en')">
+                <span><i class="icon icon-en"></i>en-EN</span>
+            </div> 
+        </div>
+        <div class="ui bottom attached active tab segment">
+            <div class="ui grid internally celled">
+                <p>{{ 'INT.TEXT1' | translate }}</p>
+                <p>{{ 'INT.TEXT2' | translate }}</p>
+            </div>
+        </div>
+    </div>
+</section>

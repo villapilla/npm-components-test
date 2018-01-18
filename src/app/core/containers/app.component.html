@@ -1,7 +1,7 @@
 <main>
   <div class="wrapper">
-      <div class="ui dimmer general-loading" [ngClass]="{'active':showSpinner}" move-to-body>
-          <div class="ui text large loader">Cargando</div>
+      <div class="ui dimmer inverted general-loading" [ngClass]="{'active':showSpinner}" move-to-body>
+          <div class="ui text large loader">{{ 'LOADING' | translate }}</div>
       </div>
       <app-header></app-header>
       <router-outlet></router-outlet>

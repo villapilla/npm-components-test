@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import './_variables.scss';
+
+.icon-es {
+    content: url('./assets/img/flags/es-ES.png');
+}
+.icon-fr {
+    content: url('./assets/img/flags/fr-FR.png');
+}
+.icon-us {
+    content: url('./assets/img/flags/en-US.png');
+}
+.icon-en {
+    content: url('./assets/img/flags/en-EN.png');
+}
+
+.app-page-container {
+    max-width: 1200px;
+    margin: auto;
+    border-left: rgba(0, 0, 0, 0.1) solid 1px;
+    border-right: rgba(0, 0, 0, 0.1) solid 1px;
+    background: rgba(255, 255, 255, 1);
+}
+section {
+    &.page-container {
+        background: rgba(0, 0, 0, 0.03);
+    }
+}
+

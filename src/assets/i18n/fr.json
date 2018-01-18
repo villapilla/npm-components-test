@@ -1,0 +1,14 @@
+{
+    "LOADING": "Chargement",
+    "HEAD": {
+        "HOME": "Maison",
+        "INT": "Internacionalisation",
+        "UPCOMING": "Évènements À Venir",
+        "LANGUAGE": "Langage"
+    },
+    "INT": {
+        "TITLE": "Internacionalisation",
+        "TEXT1": "La bataille de Normandie, baptisée l'opération Overlord, fut l'opération militaire menée par les Alliés pendant la Seconde Guerre mondiale qui aboutit à la libération des territoires de l'Europe occidentale occupés par l'Allemagne nazie. L'opération a commencé le 6 juin 1944, mieux connu sous le jour D, avec les débarquements de Normandie; l'ensemble des opérations navales a reçu le nom de code de l'opération Neptune. Un assaut aéroporté effectué par mille deux cents avions a précédé le débarquement amphibie, qui a impliqué cinq mille navires. Le 6 juin, 160 000 soldats traversèrent la Manche vers la France et, à la fin du mois d'août, les troupes alliées sur le sol français en comptaient plus de trois millions.",
+        "TEXT2": "La décision d'entreprendre une invasion par la Manche en 1944 fut prise à la Conférence du Trident à Washington DC, en mai 1943. Le général américain Dwight D. Eisenhower fut nommé commandant du quartier général suprême du Corps expéditionnaire allié ( SHAEF) et le général britannique Bernard Montgomery, commandant du 21e groupe d'armées, qui réunissait toutes les forces terrestres qui participeraient à l'invasion. L'endroit choisi était la côte de la région française de Normandie, où cinq plages ont été choisies qui ont reçu des noms de code: Utah et Omaha, qui seraient attaqués par les Américains, Sword et Gold, cible des Britanniques, et la plage Juno, lieu de débarquement des Canadiens."
+    }
+}

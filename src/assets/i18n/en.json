@@ -1,0 +1,14 @@
+{
+    "LOADING": "Loading",
+    "HEAD": {
+        "HOME": "Home",
+        "INT": "Internacionalization",
+        "UPCOMING": "Upcoming Events",
+        "LANGUAGE": "Language"
+    },
+    "INT": {
+        "TITLE": "Internacionalization", 
+        "TEXT1": "The battle of Normandy, codenamed Operation Overlord, was the military operation carried out by the Allies during the Second World War that culminated in the liberation of Western European territories occupied by Nazi Germany. The operation began on June 6, 1944, better known as Day D, with the Normandy landings; the set of naval operations received the code name of Operation Neptune. An airborne assault carried out by one thousand two hundred aircraft preceded the amphibious landing, which involved five thousand ships. On June 6, 160,000 soldiers crossed the English Channel to France and by the end of August the allied troops on French soil were more than three million.",
+        "TEXT2": "The decision to undertake an invasion through the English Channel in 1944 was made at the Trident Conference in Washington DC, in May 1943. US General Dwight D. Eisenhower was appointed commander of the Supreme Headquarters of the Allied Expeditionary Force ( SHAEF) and British General Bernard Montgomery commander of the 21st Army Group, which brought together all the ground forces that would take part in the invasion. The chosen place was the coast of the French region of Normandy, where five beaches were selected which were given code names: Utah and Omaha, which would be attacked by the Americans, Sword and Gold, target of the British, and the beach Juno, place of disembarkation of the Canadians."
+    }
+}

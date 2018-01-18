@@ -1,17 +1,38 @@
+import { getLanguage, getLayoutState } from './../../../redux/index';
+import { SetLanguageAction } from './../../actions/global-ui';
 import { Constants } from './../../constants';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { Store } from '@ngrx/store';
+import * as rootActions from '../../actions/global-ui';
+import * as fromRoot from '../../../redux';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
-  routes = Object.assign({}, Constants.Routes);
-  constructor() { }
+    subscriptions: Subscription[] = [];
+    routes = Object.assign({}, Constants.Routes);
+    selectedLanguage: string;
 
-  ngOnInit() {
-  }
+    constructor(private store: Store<fromRoot.State>) {
+    }
 
+    ngOnInit(): void {
+
+        this.subscriptions.push(this.store.select(fromRoot.getLanguage).subscribe(x => {
+            this.selectedLanguage = x;
+        }));
+    }
+
+    ngOnDestroy() {
+        this.subscriptions.forEach(x => x.unsubscribe());
+    }
+
+    changeLanguage(lang: string) {
+        this.store.dispatch(new rootActions.SetLanguageAction(lang));
+    }
 }

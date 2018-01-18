@@ -21,9 +21,37 @@
       margin-right: auto;
   }
 
-  .ui.text.container{
 
-  }
+.menu {
+    .logo {
+        img {
+            width: 1.5em;
+        }
+    }
+    .right {
+        i {
+            &dropdown.icon {
+                margin: inherit !important;
+            }
+        }
+        .primary {
+            &.button {
+                &:focus {
+                    color: inherit;
+                }
+            }
+            .icon-right {
+                .icon {
+                    margin-left: .78571429rem;
+                    margin-right: 0;
+                }
+            }
+        }
+        .without-padding {
+            padding: 0;
+        }
+    }
+}
 
 
 
