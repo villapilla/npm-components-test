@@ -8,7 +8,7 @@ import * as rootActions from '../../actions/global-ui';
 import * as fromRoot from '../../../redux';
 
 @Component({
-    selector: 'app-header',
+    selector: 'dvc-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })

@@ -1,3 +1,4 @@
+import { GridTestComponent } from './grid-test/grid-test.component';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
 import { HomeComponent } from './core/home';
 import { Constants } from './core/constants';
@@ -12,5 +13,8 @@ export const routes: Routes = [
     },
     {
         path: Constants.Routes.Internationalization, component: InternationalizationComponent
+    },
+    {
+        path: Constants.Routes.Grid, component: GridTestComponent
     }
 ];

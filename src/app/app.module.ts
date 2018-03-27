@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient, HttpHandler } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader'; 
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { RouterModule } from '@angular/router';
 
 import { SuiModule } from 'ng2-semantic-ui';
@@ -38,10 +38,10 @@ import { LanguageService } from './core';
         StoreModule.forRoot(reducers),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
         EffectsModule.forRoot([GlobalEffects]),
-        SuiModule
+        SuiModule,
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 
 export class AppModule { }

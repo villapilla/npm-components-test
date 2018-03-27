@@ -3,6 +3,7 @@
     "HEAD": {
         "HOME": "Home",
         "INT": "Internacionalization",
+        "GRID": "Grid",
         "UPCOMING": "Upcoming Events",
         "LANGUAGE": "Language"
     },

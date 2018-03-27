@@ -1,0 +1,27 @@
+<dvc-grid 
+  [paginationConfig]="paginationConfig"
+  [data]="data"
+  [totalElements]="totalElements"
+  [sortColumn]="sortColumn"
+  [sortDirection]="sortColumn"
+  (onSortClicked)="consoleOutput"
+  (onPageClicked)="consoleOutput"
+  (onItemClicked)="consoleOutput"
+  (onRemoveItemClicked)="consoleOutput">
+    <ng-container class="grid-headers">
+      <th class="four wide left aligned" [ngClass]="sortColumn === 'Nombre' ? sortStyle : ''" (click)="onSort('Nombre')">Nombre</th>
+      <th class="four wide left aligned" [ngClass]="sortColumn === 'Sistema' ? sortStyle : ''" (click)="onSort('Sistema')">Sistema</th>
+      <th class="four wide left aligned" [ngClass]="sortColumn === 'Modulo' ? sortStyle : ''" (click)="onSort('Modulo')">Módulo</th>
+      <th class="one wide"></th>
+  </ng-container>
+  <ng-template let-item>
+      <tr>
+          <td>{{item.name}}</td>
+          <td>{{item.age}}</td>
+          <td>{{item.email}}</td>
+          <td class="right aligned">
+              <i class="large remove icon click-icon" (click)="onRemove(item)" title="eliminar"></i>
+          </td>
+      </tr>
+  </ng-template>
+</dvc-grid>

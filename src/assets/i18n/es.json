@@ -3,6 +3,7 @@
     "HEAD": {
         "HOME": "Inicio",
         "INT": "Internacionalización",
+        "GRID": "Tabla",
         "UPCOMING": "Proximos Eventos",
         "LANGUAGE": "Idioma"
     },

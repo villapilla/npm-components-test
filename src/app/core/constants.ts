@@ -2,7 +2,8 @@ export const Constants = Object.freeze({
     Routes: {
         Init: '',
         Home: 'home',
-        Internationalization: 'Internationalization'
+        Internationalization: 'Internationalization',
+        Grid: 'Grid'
     },
     Language: {
         DefaultLanguages: ['en', 'fr', 'es'],

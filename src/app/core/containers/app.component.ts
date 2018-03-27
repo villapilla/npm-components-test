@@ -8,7 +8,7 @@ import * as rootActions from '../actions/global-ui';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-root',
+    selector: 'dvc-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })

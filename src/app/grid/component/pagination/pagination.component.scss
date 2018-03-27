@@ -1,0 +1,16 @@
+a.disabled {
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: underline;
+
+    &.link {
+        cursor: pointer;
+    }
+}
+
+.aligned-paginator {
+    margin-left: 50%;
+    margin-right: 50%;
+    display: inline-block;
+    transform: translate(-50%, 5%);
+}

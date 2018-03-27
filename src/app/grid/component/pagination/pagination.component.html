@@ -1,0 +1,38 @@
+<div ng-if="paginationConfig.showPagination">
+    <div class="ui center aligned-paginator">
+        <div class="ui center pagination menu">
+            <span class="icon item link" 
+                *ngIf="_paginationConfig.navigateToEnd" 
+                [class.disabled]="_page === 1"
+                (click)="_page !== 1 && goFirstPage()">
+                <i class="left chevron icon"></i>
+                <i class="left chevron icon"></i>
+            </span>
+            <span class="icon item link" 
+                *ngIf="_paginationConfig.navigateToNext"
+                [class.disabled]="_page === 1"
+                (click)="_page !== 1 && goPreviousPage()">
+                <i class="left chevron icon"></i>
+            </span>
+            <ng-template *ngFor="let p of _totalElements">
+                <span  *ngIf="_page < 4 && p < 6 
+                || _page > 3 && _page < _totalElements.length - 1 && p > _page - 3 && p < _page + 3 
+                || _page > _totalElements.length - 2 && p > _totalElements.length - 5"
+                class="item link" [ngClass]="{'active': p === _page}">{{ p }}</span>  
+            </ng-template>   
+            <span class="icon item link" 
+                *ngIf="_paginationConfig.navigateToNext" 
+                [class.disabled]="_page === _totalElements.length"
+                (click)="_page !== _totalElements.length && goNextPage()">
+                <i class="right chevron icon"></i>
+            </span>
+            <span class="icon item link" 
+                *ngIf="_paginationConfig.navigateToEnd"
+                [class.disabled]="_page === _totalElements.length"
+                (click)="_page !== _totalElements.length && goLastPage()">
+                <i class="right chevron icon"></i>
+                <i class="right chevron icon"></i>
+            </span>
+        </div>
+    </div>
+</div>

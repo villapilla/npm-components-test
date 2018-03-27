@@ -1,0 +1,21 @@
+<div class="app-grid">
+    <table class="ui sortable fixed single line celled table" *ngIf="data.length > 0">
+        <thead>
+            <tr>
+                <ng-content select=".grid-headers"></ng-content>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-template #items ngFor [ngForOf]="data" [ngForTemplate]="tmpl">
+            </ng-template>
+        </tbody>
+    </table>
+    <div class="paginator">
+        <dvc-grid-pagination *ngIf="paginationConfig && paginationConfig.showPagination"
+            [paginationConfig]="paginationConfig"
+            [totalElements]="totalElements"
+            (onPageClicked)="onPageClick($event, page)">
+        </dvc-grid-pagination>
+    </div>
+    <h3 class="header" *ngIf="data.length <= 0">No existen resultados</h3>
+</div>

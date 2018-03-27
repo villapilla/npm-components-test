@@ -1,3 +1,5 @@
+import { GridModule } from './../grid/grid.module';
+import { GridTestComponent } from './../grid-test/grid-test.component';
 import { GlobalEffects } from './effects/global-ui';
 import { SharedModule } from './../shared/shared.module';
 import { RouterModule } from '@angular/router';
@@ -21,13 +23,14 @@ export const COMPONENTS = [
     CORE_COMPONENTS,
     INTERNALIZATION_COMPONENTS,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    GridTestComponent
 ];
 
 
 @NgModule({
-    imports: [ BrowserAnimationsModule, BrowserModule, RouterModule, 
-        SuiModule, SharedModule
+    imports: [ BrowserAnimationsModule, BrowserModule, RouterModule,
+        SuiModule, SharedModule, GridModule
     ],
     declarations: COMPONENTS,
     exports: [ COMPONENTS, SuiModule],
